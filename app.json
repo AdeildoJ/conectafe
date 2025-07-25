@@ -23,6 +23,9 @@
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
+    "update": {
+      "enable": false
+    },
     "plugins": [
       "expo-router",
       [
@@ -33,10 +36,14 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      "expo-web-browser"
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "googleClientId": "577255371725-n768h8mepopfi83rags6eq1m7qh22hap.apps.googleusercontent.com"
     }
   }
 }
