@@ -5,13 +5,14 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "conectafeapp",
+    "scheme": "conectafe",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true
     },
     "android": {
+      "package": "com.alaastorjr.conectafe",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -43,7 +44,12 @@
       "typedRoutes": true
     },
     "extra": {
-      "googleClientId": "577255371725-n768h8mepopfi83rags6eq1m7qh22hap.apps.googleusercontent.com"
-    }
+      "googleClientId": "577255371725-n768h8mepopfi83rags6eq1m7qh22hap.apps.googleusercontent.com",
+      "router": {},
+      "eas": {
+        "projectId": "cc7f302a-b9de-482d-9d02-942da7afb06e"
+      }
+    },
+    "owner": "alaastorjr"
   }
 }

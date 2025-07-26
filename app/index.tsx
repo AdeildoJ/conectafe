@@ -11,7 +11,7 @@ import { Button, TextInput } from 'react-native-paper';
 import * as Yup from 'yup';
 import { auth, db } from '../config/firebaseConfig';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-
+import * as AuthSession from 'expo-auth-session';
 
 WebBrowser.maybeCompleteAuthSession();
 
@@ -20,8 +20,11 @@ export default function LoginScreen() {
 
   // 🔐 Login com Google
   const [request, response, promptAsync] = Google.useAuthRequest({
-  clientId: '577255371725-n768h8mepopfi83rags6eq1m7qh22hap.apps.googleusercontent.com',
-  redirectUri: 'https://auth.expo.io/@alaastorjr/conectafe-app',
+  clientId: '577255371725-n768h8mepopfi83rags6eq1m7qh22hap.apps.googleusercontent.com', // Web - Expo Go
+  androidClientId: '577255371725-8rgrik1civg5827kfjs5jmdfaudkvkin.apps.googleusercontent.com', // APK real
+  redirectUri: AuthSession.makeRedirectUri({
+    native: 'conectafe://redirect',
+  }),
 });
 
   useEffect(() => {
