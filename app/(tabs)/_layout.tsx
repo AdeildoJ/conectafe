@@ -6,11 +6,39 @@ export default function TabLayout() {
       <Tabs.Screen
         name="home"
         options={{
-          title: 'Início',
-          tabBarIcon: () => null, // você pode colocar um ícone se quiser
+          headerShown: false,
         }}
       />
-      {/* Outras abas, se houver */}
+      <Tabs.Screen
+        name="agenda"
+        options={{
+          headerShown: false, // 👈 remove o título e a faixa branca
+        }}
+      />
+      <Tabs.Screen
+        name="oracao"
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Tabs.Screen
+        name="idcristao"
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Tabs.Screen
+        name="certificados"
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Tabs.Screen
+        name="contribuicao"
+        options={{
+          headerShown: false,
+        }}
+      />
     </Tabs>
   );
 }
